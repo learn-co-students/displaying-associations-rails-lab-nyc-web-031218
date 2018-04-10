@@ -1,8 +1,10 @@
 class SongsController < ApplicationController
   def index
+    @songs = Song.all
   end
 
   def show
+    @song = Song.find(params[:id])
   end
 
   def new
@@ -48,3 +50,5 @@ class SongsController < ApplicationController
   end
 end
 
+# lists songs in 'Artist Name - Song Title' format (FAILED - 5)
+# links to the artist (FAILED - 6)
